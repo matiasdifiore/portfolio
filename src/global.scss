@@ -1,0 +1,36 @@
+$red050: #fff5f5;
+$red100: #fed7d7;
+$red200: #feb2b2;
+$red300: #fc8181;
+$red400: #f56565;
+$red500: #e53e3e;
+$red600: #c53030;
+$red700: #9b2c2c;
+$red800: #822727;
+$red900: #63171b;
+
+$black: #050505;
+
+$mobile: 868px;
+$desktop: 1024px;
+$iphone5: 330;
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin iphone5 {
+    @media (max-width: #{$iphone5}) {
+        @content;
+    }
+}
+
+@mixin breakpoint($point) {
+    @if $point == desktop {
+        @media (min-width: $desktop) {
+            @content;
+        }
+    }
+}
